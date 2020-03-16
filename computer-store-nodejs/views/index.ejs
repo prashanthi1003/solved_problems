@@ -1,0 +1,69 @@
+<html>
+	<head>
+		<title>Digi-x assessment</title>
+		<link rel="stylesheet" href="/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/css/digicss.css">
+	</head>
+	<body>
+		<div class="container">
+			<script> var codes = []; </script>
+			<table>
+					<tr>
+						<th>Name</th>
+						<th>Code</th>
+						<th>Price</th>
+					</tr>
+					<tr>
+						<td><%= catalogue["atv"].name %></td>
+				    	<td> atv </td>
+				    	<td><%= catalogue["atv"].price %></td>
+				   	</tr>
+				   	<tr>
+						<td><%= catalogue["ipd"].name %></td>
+				    	<td> ipd </td>
+				    	<td><%= catalogue["ipd"].price %></td>
+				   	</tr>
+				   	<tr>
+						<td><%= catalogue["vga"].name %></td>
+				    	<td> vga </td>
+				    	<td><%= catalogue["vga"].price %></td>
+				   	</tr>
+				   	<tr>
+						<td><%= catalogue["mbp"].name %></td>
+				    	<td> mbp </td>
+				    	<td><%= catalogue["mbp"].price %></td>
+				   	</tr>
+				
+			</table>
+			<form id="scanner" class="barcode-form" method="post" action="/form" onsubmit="event.preventDefault(); submitCodes();">
+				<div class="form-group">
+				  <label for="barcode">Input Barcode:</label>
+				  <input type="text" class="form-control" name="code" id="barcode" onkeypress="checkCode(event)">
+				</div>
+				<button class="btn btn-lg btn-primary btn-block" type="submit"> Get Total </button>
+			</form>
+			<div id="total-amount"></div> 
+
+		</div>
+		<script>	
+			function checkCode(event){
+				if(event.keyCode === 13){
+					event.preventDefault();
+					var code = document.getElementById("barcode").value;
+					codes.push(code);
+					document.getElementById("barcode").value = "";
+					event.stopPropagation();
+				}
+				
+			}
+
+			function submitCodes(event){
+				document.getElementById("barcode").value = codes;
+				alert(document.getElementById("barcode").value);
+				document.getElementById("scanner").submit();
+			}
+
+
+		</script>
+	</body>
+</html>

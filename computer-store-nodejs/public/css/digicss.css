@@ -1,0 +1,16 @@
+.container{
+	width: 500px;
+	height: 500px;
+	padding: 100px;
+	border: 1px solid black;
+}
+
+table td,th{
+	margin: 5px;
+	padding: 5px;
+	border: 1px solid lightpink;
+}
+
+table {
+	border: 2px solid pink;
+}
