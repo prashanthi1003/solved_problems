@@ -24,3 +24,7 @@ SKUs Scanned: atv, ipd, ipd, atv, ipd, ipd, ipd
 Total expected: $2718.95
 SKUs Scanned: mbp, vga, ipd
 Total expected: $1949.98
+
+Steps to test the solution I have provided:
+- Type SKUs and press enter. For example, type atv and press <enter>. Continue to type the SKUs one by one and press <enter>.
+- Once done, click Get Total button. 
