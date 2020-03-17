@@ -26,5 +26,7 @@ SKUs Scanned: mbp, vga, ipd
 Total expected: $1949.98
 
 Steps to test the solution I have provided:
+- Run the command "nodemon app" in the command prompt or git bash
+- Go to the browser and type in URL "http://localhost:3000/form"
 - Type SKUs and press enter. For example, type atv and press <enter>. Continue to type the SKUs one by one and press <enter>.
 - Once done, click Get Total button. 
